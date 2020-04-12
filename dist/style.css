@@ -362,6 +362,13 @@ body {
   font-weight: 400;
   color: #2d2d2d; }
 
+a {
+  text-decoration: none;
+  color: #2d2d2d; }
+
+.footer {
+  font-size: 0.8rem; }
+
 .header_section {
   background: #80cbc4; }
 
@@ -370,6 +377,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+
+.footer_section {
+  background: #80cbc4; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  background: #80cbc4;
+  padding: 16px; }
 
 .wrapper {
   max-width: 1020px;
