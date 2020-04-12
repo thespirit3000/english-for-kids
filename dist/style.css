@@ -369,9 +369,6 @@ a {
 .footer {
   font-size: 0.8rem; }
 
-.width {
-  width: 30%; }
-
 .header_section {
   background: #80cbc4; }
 
@@ -476,8 +473,8 @@ a {
   color: #2d2d2d; }
 
 .flip-card-back {
-  background-color: #80cbc4;
-  color: #2d2d2d;
+  background-color: #00695c;
+  color: #b2dfdb;
   transform: rotateY(180deg); }
 
 .word-container {
