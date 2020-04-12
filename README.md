@@ -1,5 +1,7 @@
 # English for kids
 
+## [Размещенный сайт](fancy-english.netlify.com)
+
 | Deadline         | Repository name| Branch name |
 | ---------------- | ----------- | ----------- |
 | 19.04.2020 23:59 | english-for-kids    | develop    |
