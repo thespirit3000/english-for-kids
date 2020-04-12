@@ -105,8 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 var initialize = function initialize() {
   var header = new _js_PrintUi__WEBPACK_IMPORTED_MODULE_0__["default"](_js_interface__WEBPACK_IMPORTED_MODULE_1__["default"].header);
   var footer = new _js_PrintUi__WEBPACK_IMPORTED_MODULE_0__["default"](_js_interface__WEBPACK_IMPORTED_MODULE_1__["default"].footer);
+  var main = new _js_PrintUi__WEBPACK_IMPORTED_MODULE_0__["default"](_js_interface__WEBPACK_IMPORTED_MODULE_1__["default"].main);
+  var menu = new _js_PrintUi__WEBPACK_IMPORTED_MODULE_0__["default"](_js_interface__WEBPACK_IMPORTED_MODULE_1__["default"].side_panel);
   header.printHTML(document.body);
+  main.printHTML(document.body);
   footer.printHTML(document.body);
+  menu.printHTML(document.body);
   Object(_js_eventHandler__WEBPACK_IMPORTED_MODULE_2__["default"])();
 };
 
@@ -168,7 +172,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var handleClick = function handleClick(event) {
-  return 1;
+  if (event.target.classList.contains('menu_btn')) {
+    var menuElement = document.querySelector('.sidepanel');
+    menuElement.setAttribute('style', 'width: 300px');
+  }
+
+  if (event.target.classList.contains('btn_close')) {
+    var _menuElement = document.querySelector('.sidepanel');
+
+    _menuElement.setAttribute('style', 'width: 0px');
+  }
 };
 
 var handleInput = function handleInput(event) {
@@ -196,7 +209,9 @@ var eventHandler = function eventHandler() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  header: "\n    <section class=header_section>\n      <div class='wrapper'>\n        <div class='header'>\n          <button class=\"btn menu_btn\"><i class=\"fa fa-bars\"></i></button>\n          <label class=\"switch\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\"></span>\n          </label>\n        </div>\n      </div>\n    </section>\n                    ",
+  header: "\n    <section class=header_section>\n      <div class='wrapper'>\n        <div class='header'>\n          <button class=\"btn menu_btn\"><i class=\"fa fa-bars\"></i></button>\n          <label class=\"switch\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\"></span>\n          </label>\n        </div>\n      </div>\n    </section>\n  ",
+  side_panel: "<div id=\"mainMenu\" class=\"sidepanel\">\n  <button class=\"btn btn_close\"><i class=\"fa fa-close\"></i></button>\n  <a href=\"#\">About</a> \n  <a href=\"#\">Services</a>\n  <a href=\"#\">Clients</a>\n  <a href=\"#\">Contact</a>\n  </div>",
+  main: "\n    <section class=\"main_section\">\n      <div class='wrapper'>\n        <div class=\"main main-window\">\n          <div class=\"color_card\">\n          </div> \n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n          <div class=\"color_card\">\n          </div>\n        </div>\n      </div> \n    </section> \n  ",
   footer: "\n    <section class=\"footer_section\">\n      <div class='wrapper'>\n        <div class=\"footer\">\n          <a href=\"mailto:thespirit3000@gmail.com\">created by Dzianis Bogdan</>\n        </div>\n      </div>  \n    </section>\n  "
 });
 

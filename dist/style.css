@@ -369,6 +369,9 @@ a {
 .footer {
   font-size: 0.8rem; }
 
+.width {
+  width: 30%; }
+
 .header_section {
   background: #80cbc4; }
 
@@ -391,6 +394,14 @@ a {
   background: #80cbc4;
   padding: 16px; }
 
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 20px;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: 100%; }
+
 .wrapper {
   max-width: 1020px;
   width: 100%;
@@ -409,6 +420,45 @@ a {
 
 .btn:hover {
   background-color: #00695c; }
+
+.btn_close {
+  background: rgba(0, 150, 136, 0);
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.color_card {
+  background: #80cbc4;
+  width: auto;
+  height: 250px; }
+
+.sidepanel {
+  height: 100%;
+  /* Specify a height */
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  width: 0;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 150, 136, 0.7);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: all 0.5s;
+  /* 0.5 second transition effect to slide in the sidepanel */ }
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2d2d2d;
+  display: block;
+  transition: 0.3s; }
 
 /* The switch - the box around the slider */
 .switch {
