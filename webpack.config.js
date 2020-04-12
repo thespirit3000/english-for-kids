@@ -20,40 +20,42 @@ module.exports = (env, options) => {
       filename: 'script.js',
     },
     module: {
-      rules: [{
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.(png|svg|jpe?g|gif)$/i,
-        use: [{
-          loader: 'file-loader',
-        }],
-      },
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader',
+          ],
+        },
+        {
+          test: /\.(png|svg|jpe?g|gif)$/i,
+          use: [{
+            loader: 'file-loader',
+
+          }],
+        },
+        {
+          enforce: 'pre',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
+        {
+          test: /\.html$/i,
+          loader: 'html-loader',
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
           },
         },
-      },
       ],
     },
 
