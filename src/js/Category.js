@@ -6,10 +6,10 @@ export default class Category {
 
   renderCard() {
     return `
-        <div id="${this.categoryName}" class="card">
-        <img src="${this.imgUrl}" alt="Here was might img" class='card-img'">
-        <div class="container">
-          <h4><b>${this.categoryName}</b></h4>
+        <div id="${this.categoryName}" class="card data-category">
+        <img src="${this.imgUrl}" alt="Imagine image category" class='card-img data-category'">
+        <div class="container data-category">
+          <h4 class='data-category'><b>${this.categoryName}</b></h4>
         </div>
       </div>
         `;
