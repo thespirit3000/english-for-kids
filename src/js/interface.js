@@ -23,7 +23,6 @@ export default {
     <section class="main_section">
       <div class='wrapper'>
         <div class="main main-window">
-          
         </div>
       </div> 
     </section> 
