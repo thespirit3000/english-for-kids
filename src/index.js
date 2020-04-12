@@ -1,7 +1,7 @@
 import PrintUi from './js/PrintUi';
 import interfaceTemplate from './js/interface';
 import eventHandler from './js/eventHandler';
-import renderCategoryMenu from './js/render';
+import { renderCategoryMenu } from './js/render';
 
 const initialize = () => {
   const header = new PrintUi(interfaceTemplate.header);
@@ -11,8 +11,8 @@ const initialize = () => {
   header.printHTML(document.body);
   main.printHTML(document.body);
   footer.printHTML(document.body);
-  renderCategoryMenu();
   menu.printHTML(document.body);
+  renderCategoryMenu();
   eventHandler();
 };
 
