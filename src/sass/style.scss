@@ -5,19 +5,24 @@
 
 @import 'base/normalize';
 @import 'base/typography';
+@import 'base/width';
+
 
 @import 'layout/navigation';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/main';
 @import 'layout/sidebar';
 @import 'layout/forms';
 @import 'layout/wrapper';
 
 @import 'components/buttons';
+@import 'components/card';
 @import 'components/carousel';
 @import 'components/cover';
-@import 'components/dropdown';
+@import 'components/color_card';
+@import 'components/sidepanel';
 @import 'components/switch';
 
 
