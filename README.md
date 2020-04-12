@@ -1,6 +1,6 @@
 # English for kids
 
-## [Размещенный сайт](fancy-english.netlify.com)
+## [Размещенный сайт](https://fancy-english.netlify.com/)
 
 | Deadline         | Repository name| Branch name |
 | ---------------- | ----------- | ----------- |
