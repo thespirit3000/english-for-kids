@@ -12,3 +12,10 @@
     background-color: $darken;
     ;
 }
+
+.btn_close{
+    background: $transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
