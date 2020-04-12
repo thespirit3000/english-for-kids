@@ -58,10 +58,10 @@ module.exports = (env, options) => {
     },
 
     plugins: [
-      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: 'index.html',
       }),
+      // new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: 'style.css',
       }),
