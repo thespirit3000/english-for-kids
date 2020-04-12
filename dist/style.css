@@ -432,23 +432,56 @@ a {
   transition: 0.3s;
   overflow: hidden;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 250px; }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
 
-/* Add some padding inside the card container */
 .container {
+  margin: 0 auto;
   padding: 2px 16px; }
 
 .card-img {
   width: 100%; }
 
-.color_card {
-  background: #80cbc4;
-  width: auto;
-  height: 250px; }
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+  overflow: hidden; }
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; }
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); }
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.flip-card-front {
+  background-color: #80cbc4;
+  color: #2d2d2d; }
+
+.flip-card-back {
+  background-color: #80cbc4;
+  color: #2d2d2d;
+  transform: rotateY(180deg); }
+
+.word-container {
+  padding: 2px 16px; }
 
 .sidepanel {
   height: 100%;

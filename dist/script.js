@@ -112,8 +112,8 @@ var initialize = function initialize() {
   header.printHTML(document.body);
   main.printHTML(document.body);
   footer.printHTML(document.body);
-  Object(_js_render__WEBPACK_IMPORTED_MODULE_3__["default"])();
   menu.printHTML(document.body);
+  Object(_js_render__WEBPACK_IMPORTED_MODULE_3__["renderCategoryMenu"])();
   Object(_js_eventHandler__WEBPACK_IMPORTED_MODULE_2__["default"])();
 };
 
@@ -121,6 +121,46 @@ var unloadWindow = function unloadWindow() {};
 
 window.onload = initialize;
 window.onbeforeunload = unloadWindow;
+
+/***/ }),
+
+/***/ "./src/js/Card.js":
+/*!************************!*\
+  !*** ./src/js/Card.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Category; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Category = /*#__PURE__*/function () {
+  function Category(dataObj) {
+    _classCallCheck(this, Category);
+
+    this.word = dataObj.word;
+    this.translation = dataObj.translation;
+    this.imgUrl = dataObj.image;
+    this.audioSrc = dataObj.audioSrc;
+  }
+
+  _createClass(Category, [{
+    key: "renderCard",
+    value: function renderCard() {
+      return "\n    <div class=\"flip-card\">\n      <div class=\"flip-card-inner\">\n        <div class=\"flip-card-front\">\n        <img src=\"./assets/".concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n        <div class=\"word-container\">\n          <h4 class='data-card'><b>").concat(this.word, "</b></h4>\n        </div>\n      </div>\n      <div class=\"flip-card-back\">\n      \n      <img src=\"./assets/").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n      <div class=\"word-container\">\n        <h4 class='data-card'><b>").concat(this.translation, "</b></h4>\n      </div>\n    </div>\n  </div>\n  ");
+    }
+  }]);
+
+  return Category;
+}();
+
+
 
 /***/ }),
 
@@ -151,7 +191,7 @@ var Category = /*#__PURE__*/function () {
   _createClass(Category, [{
     key: "renderCard",
     value: function renderCard() {
-      return "\n        <div id=\"".concat(this.categoryName, "\" class=\"card\">\n        <img src=\"").concat(this.imgUrl, "\" alt=\"Here was might img\" class='card-img'\">\n        <div class=\"container\">\n          <h4><b>").concat(this.categoryName, "</b></h4>\n        </div>\n      </div>\n        ");
+      return "\n        <div id=\"".concat(this.categoryName, "\" class=\"card data-category\">\n        <img src=\"").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-category'\">\n        <div class=\"container data-category\">\n          <h4 class='data-category'><b>").concat(this.categoryName, "</b></h4>\n        </div>\n      </div>\n        ");
     }
   }]);
 
@@ -544,9 +584,12 @@ var cards = [['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return eventHandler; });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
+/* harmony import */ var _render__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./render */ "./src/js/render.js");
+
 
 
 var handleClick = function handleClick(event) {
+  // console.log(event.target.parentElement.innerText);
   if (event.target.classList.contains('open_menu')) {
     var menuElement = document.querySelector('.sidepanel');
     menuElement.setAttribute('style', 'width: 300px');
@@ -556,6 +599,11 @@ var handleClick = function handleClick(event) {
     var _menuElement = document.querySelector('.sidepanel');
 
     _menuElement.setAttribute('style', 'width: 0px');
+  }
+
+  if (event.target.classList.contains('data-category')) {
+    console.log('sdklfj');
+    Object(_render__WEBPACK_IMPORTED_MODULE_1__["renderLearnCards"])(event.target.parentElement.innerText);
   }
 };
 
@@ -586,7 +634,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   header: "\n    <section class=header_section>\n      <div class='wrapper'>\n        <div class='header'>\n          <button class=\"btn menu_btn open_menu\"><i class=\"fa fa-bars open_menu\"></i></button>\n          <label class=\"switch\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\"></span>\n          </label>\n        </div>\n      </div>\n    </section>\n  ",
   side_panel: "<div id=\"mainMenu\" class=\"sidepanel\">\n  <button class=\"btn btn_close close_menu\"><i class=\"fa fa-close close_menu\"></i></button>\n  <a href=\"#\">About</a> \n  <a href=\"#\">Services</a>\n  <a href=\"#\">Clients</a>\n  <a href=\"#\">Contact</a>\n  </div>",
-  main: "\n    <section class=\"main_section\">\n      <div class='wrapper'>\n        <div class=\"main main-window\">\n          \n        </div>\n      </div> \n    </section> \n  ",
+  main: "\n    <section class=\"main_section\">\n      <div class='wrapper'>\n        <div class=\"main main-window\">\n        </div>\n      </div> \n    </section> \n  ",
   footer: "\n    <section class=\"footer_section\">\n      <div class='wrapper'>\n        <div class=\"footer\">\n          <a href=\"mailto:thespirit3000@gmail.com\">created by Dzianis Bogdan</>\n        </div>\n      </div>  \n    </section>\n  "
 });
 
@@ -596,29 +644,44 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************!*\
   !*** ./src/js/render.js ***!
   \**************************/
-/*! exports provided: default */
+/*! exports provided: renderCategoryMenu, renderLearnCards */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderCategoryMenu", function() { return renderCategoryMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderLearnCards", function() { return renderLearnCards; });
 /* harmony import */ var _Category__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Category */ "./src/js/Category.js");
 /* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cards */ "./src/js/cards.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Card */ "./src/js/Card.js");
 
 
+
+
+var cleanMain = function cleanMain() {
+  var main = document.querySelector('.main-window');
+  main.innerHTML = '';
+};
 
 var renderCategoryMenu = function renderCategoryMenu() {
+  cleanMain();
   _cards__WEBPACK_IMPORTED_MODULE_1__["default"][0].forEach(function (element) {
-    console.log(element);
     var mainCategory = document.querySelector('.main-window');
     var indexOfElement = _cards__WEBPACK_IMPORTED_MODULE_1__["default"][0].indexOf(element) + 1;
     var imgUrl = "./assets/".concat(_cards__WEBPACK_IMPORTED_MODULE_1__["default"][indexOfElement][3].image);
-    console.log(imgUrl);
     var category = new _Category__WEBPACK_IMPORTED_MODULE_0__["default"](element, imgUrl);
     mainCategory.insertAdjacentHTML('beforeend', category.renderCard());
   });
 };
-
-/* harmony default export */ __webpack_exports__["default"] = (renderCategoryMenu);
+var renderLearnCards = function renderLearnCards(target) {
+  cleanMain();
+  var main = document.querySelector('.main-window');
+  var categoryIndex = _cards__WEBPACK_IMPORTED_MODULE_1__["default"][0].indexOf(target) + 1;
+  _cards__WEBPACK_IMPORTED_MODULE_1__["default"][categoryIndex].forEach(function (element) {
+    var item = new _Card__WEBPACK_IMPORTED_MODULE_2__["default"](element);
+    main.insertAdjacentHTML('beforeend', item.renderCard());
+  });
+};
 
 /***/ }),
 
