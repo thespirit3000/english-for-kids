@@ -34,8 +34,8 @@
 }
 
 .flip-card-back {
-    background-color: $backg_color;
-    color: $text_color;
+    background-color: $darken;
+    color: $not_active;
     transform: rotateY(180deg);
 }
 
