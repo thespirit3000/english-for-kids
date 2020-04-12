@@ -1,6 +1,15 @@
 import gameModeSet from './utils';
 
-const handleClick = (event) => 1;
+const handleClick = (event) => {
+  if (event.target.classList.contains('open_menu')) {
+    const menuElement = document.querySelector('.sidepanel');
+    menuElement.setAttribute('style', 'width: 300px');
+  }
+  if (event.target.classList.contains('close_menu')) {
+    const menuElement = document.querySelector('.sidepanel');
+    menuElement.setAttribute('style', 'width: 0px');
+  }
+};
 
 const handleInput = (event) => {
   if (event.target.classList.contains('switcher')) {
