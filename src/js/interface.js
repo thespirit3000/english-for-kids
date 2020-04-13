@@ -1,6 +1,6 @@
 export default {
   header: `
-    <section class=header_section>
+    <div class="header_section">
       <div class='wrapper'>
         <div class='header'>
           <button class="btn menu_btn open_menu"><i class="fa fa-bars open_menu"></i></button>
@@ -10,20 +10,17 @@ export default {
           </label>
         </div>
       </div>
-    </section>
+    </div>
   `,
   side_panel: `<div id="mainMenu" class="sidepanel">
   <button class="btn btn_close close_menu"><i class="fa fa-close close_menu"></i></button>
-  <a href="#">About</a> 
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div class="sidemenu-item category">Main menu</div>
   </div>`,
   main: `
-    <section class="main_section">
+    <section class="main_section ">
       <div class='wrapper'>
-        <div class="main main-window">
-        </div>
+      <div class="main main-window absolute-center">
+      </div>
       </div> 
     </section> 
   `,

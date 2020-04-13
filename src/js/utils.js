@@ -1,4 +1,4 @@
-const gameModeSet = (gameSwitcher) => {
+export const gameModeSet = (gameSwitcher) => {
   if (gameSwitcher.checked === true) {
     console.log('game');
   } else {
@@ -6,4 +6,14 @@ const gameModeSet = (gameSwitcher) => {
   }
 };
 
-export { gameModeSet as default };
+export const elementBySelector = (element, selector) => element.querySelector(selector);
+
+export const setActive = (element, activeSelectorClass) => {
+  element.classList.add(activeSelectorClass);
+};
+
+export const removeActive = (element, activeSelectorClass) => {
+  element.classList.remove(activeSelectorClass);
+};
+
+export const removeWhiteSpaces = (string) => string.split(/\s/).join('');

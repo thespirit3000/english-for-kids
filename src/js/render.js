@@ -13,8 +13,16 @@ export const renderCategoryMenu = () => {
     const mainCategory = document.querySelector('.main-window');
     const indexOfElement = cards[0].indexOf(element) + 1;
     const imgUrl = `./assets/${cards[indexOfElement][3].image}`;
-    const category = new Category(element, imgUrl);
+    const category = new Category(element, imgUrl, cards[0].indexOf(element));
     mainCategory.insertAdjacentHTML('beforeend', category.renderCard());
+  });
+};
+
+export const renderSideMenu = () => {
+  const menu = document.querySelector('.sidepanel');
+  cards[0].forEach((element) => {
+    const category = new Category(element, '', cards[0].indexOf(element));
+    menu.insertAdjacentHTML('beforeend', category.renderMenu());
   });
 };
 
