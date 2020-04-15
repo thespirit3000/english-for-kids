@@ -1,7 +1,7 @@
 import { renderLearnCards, renderCategoryMenu } from './render';
 import state from './state';
 import {
-  gameModeSet, elementBySelector, setActive, removeActive,
+  gameModeSet, elementBySelector, setActive, removeActive, playAudio,
 } from './utils';
 
 const handleClick = (event) => {
@@ -39,6 +39,10 @@ const handleClick = (event) => {
     const active = elementBySelector(document, '.active');
     removeActive(active, 'active');
     setActive(event.target, 'active');
+  }
+  if (event.target.classList.contains('flip-card-overlay')) {
+    const clickedCard = event.target.parentElement;
+    playAudio(clickedCard);
   }
 };
 
