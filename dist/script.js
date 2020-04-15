@@ -157,7 +157,7 @@ var Category = /*#__PURE__*/function () {
   _createClass(Category, [{
     key: "renderCard",
     value: function renderCard() {
-      return "\n    <div class=\"flip-card\">\n      <div class=\"flip-card-inner\">\n        <div class=\"flip-card-front\">\n        <img src=\"./assets/".concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n        <div class=\"word-container\">\n          <h4 class='data-card'><b>").concat(this.word, "</b></h4>\n        </div>\n      </div>\n      <div class=\"flip-card-back\">\n      <img src=\"./assets/").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n      <div class=\"word-container\">\n        <h4 class='data-card'><b>").concat(this.translation, "</b></h4>\n      </div>\n    </div>\n  </div>\n  ");
+      return "\n    <div class=\"flip-card\">\n      <div class=\"flip-card-inner\">\n        <div id=\"".concat(this.word, "\" class=\"flip-card-front\">\n          <div class=\"flip-card-overlay\">\n            <audio>\n              <source src=\"./assets/").concat(this.audioSrc, "\" type=\"audio/mpeg\" class=audio>\n          </audio>\n          </div>\n            <img src=\"./assets/").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n          <div class=\"word-container\">\n            <h4 class='data-card'><b>").concat(this.word, "</b></h4>\n          </div>\n        </div>\n        <div class=\"flip-card-back\">\n          <img src=\"./assets/").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-card'\">\n          <div class=\"word-container\">\n            <h4 class='data-card'><b>").concat(this.translation, "</b></h4>\n          </div>\n        </div>\n      </div>\n    </div>  \n  ");
     }
   }]);
 
@@ -647,6 +647,11 @@ var handleClick = function handleClick(event) {
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active3, 'active');
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(event.target, 'active');
   }
+
+  if (event.target.classList.contains('flip-card-overlay')) {
+    var clickedCard = event.target.parentElement;
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["playAudio"])(clickedCard);
+  }
 };
 
 var handleInput = function handleInput(event) {
@@ -755,7 +760,7 @@ var state = {
 /*!*************************!*\
   !*** ./src/js/utils.js ***!
   \*************************/
-/*! exports provided: gameModeSet, elementBySelector, setActive, removeActive, removeWhiteSpaces */
+/*! exports provided: gameModeSet, elementBySelector, setActive, removeActive, playAudio, removeWhiteSpaces */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -764,6 +769,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementBySelector", function() { return elementBySelector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActive", function() { return setActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeActive", function() { return removeActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "playAudio", function() { return playAudio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeWhiteSpaces", function() { return removeWhiteSpaces; });
 var gameModeSet = function gameModeSet(gameSwitcher) {
   if (gameSwitcher.checked === true) {
@@ -780,6 +786,10 @@ var setActive = function setActive(element, activeSelectorClass) {
 };
 var removeActive = function removeActive(element, activeSelectorClass) {
   element.classList.remove(activeSelectorClass);
+};
+var playAudio = function playAudio(element) {
+  var toPlay = element.querySelector('audio');
+  toPlay.play();
 };
 var removeWhiteSpaces = function removeWhiteSpaces(string) {
   return string.split(/\s/).join('');
