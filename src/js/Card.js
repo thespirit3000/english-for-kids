@@ -20,6 +20,7 @@ export default class Category {
           <div class="word-container">
             <h4 class='data-card'><b>${this.word}</b></h4>
           </div>
+          <button class="btn btn-rotate"><i class="fa fa-refresh rotate-card"></i></button>
         </div>
         <div class="flip-card-back">
           <img src="./assets/${this.imgUrl}" alt="Imagine image category" class='card-img data-card'">
