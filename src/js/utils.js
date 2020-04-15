@@ -16,4 +16,9 @@ export const removeActive = (element, activeSelectorClass) => {
   element.classList.remove(activeSelectorClass);
 };
 
+export const playAudio = (element) => {
+  const toPlay = element.querySelector('audio');
+  toPlay.play();
+};
+
 export const removeWhiteSpaces = (string) => string.split(/\s/).join('');
