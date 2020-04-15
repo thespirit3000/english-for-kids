@@ -99,6 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_interface__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/interface */ "./src/js/interface.js");
 /* harmony import */ var _js_eventHandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/eventHandler */ "./src/js/eventHandler.js");
 /* harmony import */ var _js_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/render */ "./src/js/render.js");
+/* harmony import */ var _js_state__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/state */ "./src/js/state.js");
+
 
 
 
@@ -116,6 +118,7 @@ var initialize = function initialize() {
   Object(_js_render__WEBPACK_IMPORTED_MODULE_3__["renderCategoryMenu"])();
   Object(_js_render__WEBPACK_IMPORTED_MODULE_3__["renderSideMenu"])();
   Object(_js_eventHandler__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  console.log(_js_state__WEBPACK_IMPORTED_MODULE_4__["default"]);
 };
 
 var unloadWindow = function unloadWindow() {};
@@ -601,6 +604,10 @@ var handleClick = function handleClick(event) {
   if (event.target.classList.contains('open_menu')) {
     var menuElement = document.querySelector('.sidepanel');
     menuElement.setAttribute('style', 'width: 300px');
+    var active = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
+    var sideMenu = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, ".item".concat(_state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory));
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(active, 'active');
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(sideMenu, 'active');
   }
 
   if (event.target.classList.contains('close_menu')) {
@@ -612,15 +619,22 @@ var handleClick = function handleClick(event) {
   if (event.target.classList.contains('data-category')) {
     Object(_render__WEBPACK_IMPORTED_MODULE_0__["renderLearnCards"])(event.target.parentElement.innerText);
     _state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory = event.target.parentElement.id;
-    var sideMenu = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, ".item".concat(_state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory));
-    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(sideMenu, 'active');
+
+    var _active = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
+
+    var _sideMenu = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, ".item".concat(_state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory));
+
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active, 'active');
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(_sideMenu, 'active');
   }
 
   if (event.target.classList.contains('category')) {
     Object(_render__WEBPACK_IMPORTED_MODULE_0__["renderCategoryMenu"])();
     _state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory = event.target.id;
-    var active = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
-    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(active, 'active');
+
+    var _active2 = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
+
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active2, 'active');
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(event.target, 'active');
   }
 
@@ -628,9 +642,9 @@ var handleClick = function handleClick(event) {
     Object(_render__WEBPACK_IMPORTED_MODULE_0__["renderLearnCards"])(event.target.innerText);
     _state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory = event.target.id;
 
-    var _active = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
+    var _active3 = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
 
-    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active, 'active');
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active3, 'active');
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(event.target, 'active');
   }
 };
@@ -661,7 +675,7 @@ var eventHandler = function eventHandler() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   header: "\n    <div class=\"header_section\">\n      <div class='wrapper'>\n        <div class='header'>\n          <button class=\"btn menu_btn open_menu\"><i class=\"fa fa-bars open_menu\"></i></button>\n          <label class=\"switch\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\"></span>\n          </label>\n        </div>\n      </div>\n    </div>\n  ",
-  side_panel: "<div id=\"mainMenu\" class=\"sidepanel\">\n  <button class=\"btn btn_close close_menu\"><i class=\"fa fa-close close_menu\"></i></button>\n  <div class=\"sidemenu-item category\">Main menu</div>\n  </div>",
+  side_panel: "<div id=\"mainMenu\" class=\"sidepanel\">\n  <button class=\"btn btn_close close_menu\"><i class=\"fa fa-close close_menu\"></i></button>\n  <div class=\"sidemenu-item category active itemmain\">Main menu</div>\n  </div>",
   main: "\n    <section class=\"main_section \">\n      <div class='wrapper'>\n      <div class=\"main main-window absolute-center\">\n      </div>\n      </div> \n    </section> \n  ",
   footer: "\n    <section class=\"footer_section\">\n      <div class='wrapper'>\n        <div class=\"footer\">\n          <a href=\"mailto:thespirit3000@gmail.com\">created by Dzianis Bogdan</>\n        </div>\n      </div>  \n    </section>\n  "
 });
@@ -731,7 +745,7 @@ var renderLearnCards = function renderLearnCards(target) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var state = {
-  activeCategory: ''
+  activeCategory: 'main'
 };
 /* harmony default export */ __webpack_exports__["default"] = (state);
 
