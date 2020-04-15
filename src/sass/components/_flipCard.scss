@@ -15,7 +15,7 @@
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card.back .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -42,3 +42,12 @@
 .word-container {
     padding: 2px 16px;
   }
+
+.flip-card-overlay{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    z-index: 100;
+}
