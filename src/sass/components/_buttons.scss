@@ -6,6 +6,7 @@
     padding: 12px 16px;
     font-size: 22px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .btn:hover {
@@ -18,4 +19,11 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+.btn-rotate{
+    background: $rgba;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
 }
