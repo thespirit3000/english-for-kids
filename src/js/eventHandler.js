@@ -32,7 +32,6 @@ const handleClick = (event) => {
     removeActive(active, 'active');
     setActive(event.target, 'active');
   }
-
   if (event.target.classList.contains('menu-item')) {
     renderLearnCards(event.target.innerText);
     state.activeCategory = event.target.id;
@@ -43,6 +42,18 @@ const handleClick = (event) => {
   if (event.target.classList.contains('flip-card-overlay')) {
     const clickedCard = event.target.parentElement;
     playAudio(clickedCard);
+  }
+  if (event.target.classList.contains('rotate-card')) {
+    const rotatingCard = event.path[4];
+    rotatingCard.classList.add('rotate');
+  }
+};
+
+const handleMouseOver = (event) => {
+  console.log(event.target);
+  if (event.target.classList.contains('data-card')) {
+    const rotateRemove = document.querySelector('.rotate');
+    rotateRemove.classList.remove('rotate');
   }
 };
 
@@ -55,6 +66,7 @@ const handleInput = (event) => {
 const eventHandler = () => {
   document.addEventListener('input', handleInput);
   document.addEventListener('click', handleClick);
+  document.addEventListener('mouseout', handleMouseOver);
 };
 
 export { eventHandler as default };
