@@ -8,6 +8,10 @@ const handleClick = (event) => {
   if (event.target.classList.contains('open_menu')) {
     const menuElement = document.querySelector('.sidepanel');
     menuElement.setAttribute('style', 'width: 300px');
+    const active = elementBySelector(document, '.active');
+    const sideMenu = elementBySelector(document, `.item${state.activeCategory}`);
+    removeActive(active, 'active');
+    setActive(sideMenu, 'active');
   }
   if (event.target.classList.contains('close_menu')) {
     const menuElement = document.querySelector('.sidepanel');
@@ -16,7 +20,9 @@ const handleClick = (event) => {
   if (event.target.classList.contains('data-category')) {
     renderLearnCards(event.target.parentElement.innerText);
     state.activeCategory = event.target.parentElement.id;
+    const active = elementBySelector(document, '.active');
     const sideMenu = elementBySelector(document, `.item${state.activeCategory}`);
+    removeActive(active, 'active');
     setActive(sideMenu, 'active');
   }
   if (event.target.classList.contains('category')) {
@@ -35,7 +41,6 @@ const handleClick = (event) => {
     setActive(event.target, 'active');
   }
 };
-
 
 const handleInput = (event) => {
   if (event.target.classList.contains('switcher')) {

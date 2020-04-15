@@ -14,7 +14,7 @@ export default {
   `,
   side_panel: `<div id="mainMenu" class="sidepanel">
   <button class="btn btn_close close_menu"><i class="fa fa-close close_menu"></i></button>
-  <div class="sidemenu-item category">Main menu</div>
+  <div class="sidemenu-item category active itemmain">Main menu</div>
   </div>`,
   main: `
     <section class="main_section ">

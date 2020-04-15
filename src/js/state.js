@@ -1,5 +1,5 @@
 const state = {
-  activeCategory: '',
+  activeCategory: 'main',
 };
 
 export default state;
