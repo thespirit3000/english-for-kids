@@ -17,6 +17,7 @@ const handleClick = (event) => {
     const menuElement = document.querySelector('.sidepanel');
     menuElement.setAttribute('style', 'width: 0px');
   }
+
   if (event.target.classList.contains('data-category')) {
     renderLearnCards(event.target.parentElement.innerText);
     state.activeCategory = event.target.parentElement.id;
