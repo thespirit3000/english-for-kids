@@ -1,15 +1,22 @@
-
-.main{
+.main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px 20px;
     justify-content: space-between;
-    padding: 60px 0;
+    padding: 60px 20px;
     height: 100%;
-}
 
-.main-inner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include respond-to('mobile') {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px 10px;
+    }
+    
+    @include respond-to('tablet') {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 10px;
+    }
+    @include respond-to('desktop') {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px 20px;
+    }
 }

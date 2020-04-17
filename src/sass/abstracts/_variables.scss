@@ -4,5 +4,11 @@ $darken: #00695c;
 $not_active: #b2dfdb;
 $rgba_strong: rgba(0, 150, 136, 0.7);
 $rgba: rgba(0, 150, 136, 0.4);
-$transparent:  rgba(0, 150, 136, 0);
+$transparent: rgba(0, 150, 136, 0);
 $active: #aa66cc;
+
+$breakpoints: 
+    ('mobile': (min-width:320px),
+    'tablet': (min-width:740px),
+    'desktop': (min-width:1020px),
+    'wide': (min-width:1300px));
