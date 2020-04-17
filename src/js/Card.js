@@ -24,7 +24,7 @@ export default class Category {
         </div>
         <div class="flip-card-back">
           <img src="./assets/${this.imgUrl}" alt="Imagine image category" class='card-img data-card'">
-          <div class="word-container">
+          <div class="word-container data-card">
             <h4 class='data-card'><b>${this.translation}</b></h4>
           </div>
         </div>
