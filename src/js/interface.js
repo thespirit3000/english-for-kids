@@ -6,7 +6,9 @@ export default {
           <button class="btn menu_btn open_menu"><i class="fa fa-bars open_menu"></i></button>
           <label class="switch">
           <input class="switcher" type="checkbox">
-          <span class="slider round"></span>
+          <span class="slider round">
+          <span class="on">Game</span>
+          </span>
           </label>
         </div>
       </div>
@@ -17,12 +19,12 @@ export default {
   <div class="sidemenu-item category active itemmain">Main menu</div>
   </div>`,
   main: `
-    <section class="main_section ">
-      <div class='wrapper'>
-      <div class="main main-window absolute-center">
+    <div class="main_section">
+      <div class="wrapper">
+      <div class="main main-window">
       </div>
       </div> 
-    </section> 
+    </div> 
   `,
   footer: `
     <section class="footer_section">
