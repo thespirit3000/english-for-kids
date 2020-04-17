@@ -1,7 +1,7 @@
 import { renderLearnCards, renderCategoryMenu } from './render';
 import state from './state';
 import {
-  gameModeSet, elementBySelector, setActive, removeActive, playAudio,
+  gameModeSet, elementBySelector, setActive, removeActive, playAudio, closeMenu,
 } from './utils';
 
 const handleClick = (event) => {
@@ -14,8 +14,7 @@ const handleClick = (event) => {
     setActive(sideMenu, 'active');
   }
   if (event.target.classList.contains('close_menu')) {
-    const menuElement = document.querySelector('.sidepanel');
-    menuElement.setAttribute('style', 'width: 0px');
+    closeMenu();
   }
 
   if (event.target.classList.contains('data-category')) {
@@ -39,6 +38,10 @@ const handleClick = (event) => {
     const active = elementBySelector(document, '.active');
     removeActive(active, 'active');
     setActive(event.target, 'active');
+    closeMenu();
+  }
+  if (event.target.classList.contains('sidemenu-item')) {
+    closeMenu();
   }
   if (event.target.classList.contains('flip-card-overlay')) {
     const clickedCard = event.target.parentElement;

@@ -21,4 +21,9 @@ export const playAudio = (element) => {
   toPlay.play();
 };
 
+export const closeMenu = () => {
+  const menuElement = document.querySelector('.sidepanel');
+  menuElement.setAttribute('style', 'width: 0px');
+};
+
 export const removeWhiteSpaces = (string) => string.split(/\s/).join('');
