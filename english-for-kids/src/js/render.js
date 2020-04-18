@@ -1,6 +1,7 @@
 import Category from './Category';
 import cards from './data-array';
 import Card from './Card';
+import state from './state';
 
 const cleanMain = () => {
   const main = document.querySelector('.main-window');
@@ -31,7 +32,12 @@ export const renderLearnCards = (target) => {
   const main = document.querySelector('.main-window');
   const categoryIndex = cards[0].indexOf(target) + 1;
   cards[categoryIndex].forEach((element) => {
-    const item = new Card(element);
+    const item = new Card(element, state.game);
     main.insertAdjacentHTML('beforeend', item.renderCard());
   });
 };
+
+export const renderLearnCardsFromState = (stateActiveCategory) => {
+  const categoryIndex = cards[0][+stateActiveCategory];
+  renderLearnCards(categoryIndex);
+}
