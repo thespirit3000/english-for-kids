@@ -4,12 +4,13 @@
     height: 250px;
     perspective: 1000px;
     overflow: hidden;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     transition: ease 0.3s;
-    
+
 }
+
 .flip-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-inner {
@@ -47,13 +48,20 @@
 
 .word-container {
     padding: 2px 16px;
-  }
+}
 
-.flip-card-overlay{
+.flip-card-overlay {
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
     z-index: 100;
+}
+
+.imgGame{
+    overflow: hidden;
+    transform: translateX(-15%);
+    height: 100%;
+    width: auto;
 }
