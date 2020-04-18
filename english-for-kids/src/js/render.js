@@ -1,5 +1,5 @@
 import Category from './Category';
-import cards from './cards';
+import cards from './data-array';
 import Card from './Card';
 
 const cleanMain = () => {
