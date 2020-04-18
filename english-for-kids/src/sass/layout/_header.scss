@@ -1,9 +1,30 @@
 
+.header_section{
+    background: $backg_color;
+}
 .header{
     padding-left: 20px;
     padding-right: 20px;
-    height: 71px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+
+    @include respond-to('mobile') {
+        left: 0;
+        right: 0;
+        top: 0;
+        position: fixed;
+        height: 58px;
+        background: $backg_color;
+    }
+
+    @include respond-to('tablet') {
+        position: unset;
+        height: 71px;
+    }
+    
+    @include respond-to('desktop') {
+        
+    }
 }

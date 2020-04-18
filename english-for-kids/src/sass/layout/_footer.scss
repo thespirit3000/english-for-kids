@@ -1,15 +1,26 @@
-.footer_section{
+.footer_section {
     background: $backg_color;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+
     text-decoration: none;
     text-align: center;
     background: $backg_color;
-    padding: 16px;
-    
+
+
+    @include respond-to('mobile') {
+        padding: 0;
+        position: unset;
+    }
+
+    @include respond-to('tablet') {}
+
+    @include respond-to('desktop') {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+    }
 }
