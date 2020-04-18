@@ -27,3 +27,16 @@
     top: 0;
     z-index: 1000;
 }
+
+.game-btn{
+    opacity: 1;
+    transition: opacity linear 0.3s;
+    border-style: solid;
+    border-color: black;
+}
+.repeat_btn{
+    position: absolute;
+    left: 45%;
+    opacity: 1;
+    transition: opacity linear 0.3s;
+}
