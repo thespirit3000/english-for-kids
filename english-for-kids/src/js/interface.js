@@ -4,6 +4,8 @@ export default {
       <div class='wrapper'>
         <div class='header'>
           <button class="btn menu_btn open_menu"><i class="fa fa-bars open_menu"></i></button>
+          <button class="btn game_btn hidden_opacity">Start game</i></button>
+          <button class="btn repeat_btn hidden_opacity"><i class="fa fa-refresh rotate-card"></i></i></button>
           <label class="switch">
           <input class="switcher" type="checkbox">
           <span class="slider round">

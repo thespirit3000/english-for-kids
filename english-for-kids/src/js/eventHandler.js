@@ -1,7 +1,19 @@
-import { renderLearnCards, renderCategoryMenu } from './render';
+import {
+  renderLearnCards,
+  renderCategoryMenu,
+  renderLearnCardsFromState,
+} from './render';
 import state from './state';
 import {
-  gameModeSet, elementBySelector, setActive, removeActive, playAudio, closeMenu,
+  elementBySelector,
+  setActive,
+  removeActive,
+  playAudio,
+  closeMenu,
+  showButton,
+  startGame,
+  hideButton,
+  stopGame,
 } from './utils';
 
 const handleClick = (event) => {
@@ -12,11 +24,11 @@ const handleClick = (event) => {
     const sideMenu = elementBySelector(document, `.item${state.activeCategory}`);
     removeActive(active, 'active');
     setActive(sideMenu, 'active');
+    stopGame();
   }
   if (event.target.classList.contains('close_menu')) {
     closeMenu();
   }
-
   if (event.target.classList.contains('data-category')) {
     renderLearnCards(event.target.parentElement.innerText);
     state.activeCategory = event.target.parentElement.id;
@@ -45,16 +57,21 @@ const handleClick = (event) => {
   }
   if (event.target.classList.contains('flip-card-overlay')) {
     const clickedCard = event.target.parentElement;
-    playAudio(clickedCard);
+    if (!state.game) {
+      playAudio(clickedCard);
+    }
   }
   if (event.target.classList.contains('rotate-card')) {
     const rotatingCard = event.path[4];
     rotatingCard.classList.add('rotate');
   }
+  if (event.target.classList.contains('game_btn')) {
+    startGame();
+    hideButton('.game_btn');
+  }
 };
 
 const handleMouseOver = (event) => {
-  console.log(event.target);
   if (event.target.classList.contains('data-card')) {
     const rotateRemove = document.querySelector('.rotate');
     rotateRemove.classList.remove('rotate');
@@ -64,6 +81,15 @@ const handleMouseOver = (event) => {
 const handleInput = (event) => {
   if (event.target.classList.contains('switcher')) {
     state.toggleGameState();
+    if (state.activeCategory !== 'main') {
+      if (state.game) {
+        showButton('.game_btn');
+      } else {
+        hideButton('.game_btn');
+        stopGame();
+      }
+      renderLearnCardsFromState(state.activeCategory);
+    }
   }
 };
 
@@ -73,4 +99,7 @@ const eventHandler = () => {
   document.addEventListener('mouseout', handleMouseOver);
 };
 
-export { eventHandler as default };
+export {
+  eventHandler as
+  default,
+};
