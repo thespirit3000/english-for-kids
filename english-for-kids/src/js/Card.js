@@ -1,4 +1,4 @@
-export default class Category {
+export default class Card {
   constructor(dataObj) {
     this.word = dataObj.word;
     this.translation = dataObj.translation;
