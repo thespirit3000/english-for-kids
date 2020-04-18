@@ -1,12 +1,29 @@
 export default class Card {
-  constructor(dataObj) {
+  constructor(dataObj, gameMode) {
     this.word = dataObj.word;
     this.translation = dataObj.translation;
     this.imgUrl = dataObj.image;
     this.audioSrc = dataObj.audioSrc;
+    this.gameMode = gameMode;
   }
 
-  renderCard() {
+  renderGameCard() {
+    return `
+    <div class="flip-card">
+    <div class="flip-card-inner">
+      <div id="${this.word}" class="flip-card-front">
+        <div class="flip-card-overlay">
+          <audio>
+            <source src="./assets/${this.audioSrc}" type="audio/mpeg" class=audio>
+        </audio>
+        </div>
+          <img src="./assets/${this.imgUrl}" alt="Imagine image" class='card-img data-card imgGame'">
+      </div>
+      </div>
+    `;
+  }
+
+  renderLearnCard() {
     return `
     <div class="flip-card">
       <div class="flip-card-inner">
@@ -31,5 +48,9 @@ export default class Card {
       </div>
     </div>  
   `;
+  }
+
+  renderCard() {
+    return (this.gameMode) ? this.renderGameCard() : this.renderLearnCard();
   }
 }
