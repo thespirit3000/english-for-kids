@@ -63,7 +63,7 @@ const handleMouseOver = (event) => {
 
 const handleInput = (event) => {
   if (event.target.classList.contains('switcher')) {
-    gameModeSet(event.target);
+    state.toggleGameState();
   }
 };
 
