@@ -1,5 +1,4 @@
 import state from './state';
-import cards from './data-array';
 
 export const elementBySelector = (element, selector) => element.querySelector(selector);
 
@@ -31,22 +30,35 @@ export const hideButton = (selector) => {
   buttonToHide.classList.add('hidden_opacity');
 };
 
-const shuffleDom = (parentSelector) => {
-  const list = document.querySelector(parentSelector);
-  for (let i = list.children.length; i >= 0; i--) {
-    list.appendChild(list.children[(Math.random() * i) || 0]);
-  }
-};
-
-const mainArray = () => document.querySelector('.main').children;
+const activeArray = () => document.querySelectorAll('.active_card');
 
 export const startGame = () => {
-  const array = mainArray();
+  state.toggleStarted();
   showButton('.repeat_btn');
+  state.gameArray = activeArray();
+  const { length } = state.gameArray;
+  const index = Math.floor(Math.random() * length);
+  state.currentIndex = index;
+  state.currentWord = state.gameArray[index];
+  console.log(state.gameArray);
+  playAudio(state.currentWord);
+};
+
+export const nextCard = () => {
+  state.gameArray = activeArray();
+  const { length } = state.gameArray;
+  const index = Math.floor(Math.random() * length);
+  state.currentIndex = index;
+  state.currentWord = state.gameArray[index];
+  console.log(state.gameArray);
+  playAudio(state.currentWord);
 };
 
 export const stopGame = () => {
+  state.toggleStarted();
   hideButton('.repeat_btn');
+  state.gameArray = [];
+  state.currentWord = '';
   if (state.game) {
     showButton('.game_btn');
   }

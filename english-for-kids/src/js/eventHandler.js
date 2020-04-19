@@ -14,6 +14,7 @@ import {
   startGame,
   hideButton,
   stopGame,
+  nextCard,
 } from './utils';
 
 const handleClick = (event) => {
@@ -60,7 +61,15 @@ const handleClick = (event) => {
     if (!state.game) {
       playAudio(clickedCard);
     }
+    if (state.gameStarted) {
+      if (state.currentWord === event.path[3]) {
+        event.path[3].classList.add('checked');
+        event.path[3].classList.remove('active_card');
+        nextCard();
+      }
+    }
   }
+
   if (event.target.classList.contains('rotate-card')) {
     const rotatingCard = event.path[4];
     rotatingCard.classList.add('rotate');
@@ -68,6 +77,9 @@ const handleClick = (event) => {
   if (event.target.classList.contains('game_btn')) {
     startGame();
     hideButton('.game_btn');
+  }
+  if (event.target.classList.contains('repeat_btn')) {
+    playAudio(state.currentWord);
   }
 };
 

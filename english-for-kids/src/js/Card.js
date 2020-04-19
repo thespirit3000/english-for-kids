@@ -9,7 +9,7 @@ export default class Card {
 
   renderGameCard() {
     return `
-    <div class="flip-card">
+    <div class="flip-card active_card">
     <div class="flip-card-inner">
       <div id="${this.word}" class="flip-card-front">
         <div class="flip-card-overlay">

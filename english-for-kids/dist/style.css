@@ -1,6 +1,7 @@
 .hidden_opacity {
   opacity: 0;
-  z-index: -1; }
+  z-index: -1;
+  display: none; }
 
 .checked {
   opacity: 0.5; }
@@ -369,6 +370,12 @@ body {
   font-weight: 400;
   color: #2d2d2d;
   user-select: none; }
+  @media (min-width: 320px) {
+    body {
+      font-size: 100%; } }
+  @media (min-width: 740px) {
+    body {
+      font-size: 100%; } }
 
 a {
   text-decoration: none;
@@ -376,6 +383,23 @@ a {
 
 .footer {
   font-size: 0.8rem; }
+
+.end-screen {
+  position: absolute;
+  left: 25%;
+  top: 30%; }
+  @media (min-width: 320px) {
+    .end-screen {
+      left: 0%;
+      top: 40%; } }
+  @media (min-width: 740px) {
+    .end-screen {
+      left: 25%;
+      top: 30%; } }
+
+.end-img {
+  width: 100%;
+  height: auto; }
 
 .header_section {
   background: #80cbc4; }
@@ -394,7 +418,8 @@ a {
       top: 0;
       position: fixed;
       height: 58px;
-      background: #80cbc4; } }
+      background: #80cbc4;
+      z-index: 120; } }
   @media (min-width: 740px) {
     .header {
       position: unset;
@@ -409,24 +434,25 @@ a {
   background: #80cbc4; }
   @media (min-width: 320px) {
     .footer {
-      padding: 0;
-      position: unset; } }
+      position: fixed;
+      bottom: 0; } }
   @media (min-width: 1020px) {
     .footer {
       position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 10px; } }
+      bottom: 0; } }
 
 .main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px 20px;
   justify-content: space-between;
-  padding: 60px 20px;
-  height: 100%; }
+  padding: 10px 20px;
+  position: relative; }
   @media (min-width: 320px) {
+    .main {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px 10px; } }
+  @media (min-width: 450px) {
     .main {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px 10px; } }
@@ -438,6 +464,20 @@ a {
     .main {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px 20px; } }
+
+.score {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  overflow: visible; }
+
+.error {
+  color: #00695c; }
+
+.correct {
+  color: #aa66cc; }
 
 .wrapper {
   width: 100%;
@@ -489,31 +529,55 @@ a {
 .card {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  position: relative;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  height: 250px; }
+  flex-direction: column; }
+  @media (min-width: 320px) {
+    .card {
+      height: 300px; } }
+  @media (min-width: 450px) {
+    .card {
+      height: 300px; } }
+  @media (min-width: 740px) {
+    .card {
+      height: 280px; } }
+  @media (min-width: 1020px) {
+    .card {
+      height: 250px; } }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); }
 
 .container {
   text-align: center;
   padding-top: 10%;
   width: 100%;
-  height: 100%; }
+  height: 50px; }
 
-.card-img {
-  width: 100%; }
+.category-img {
+  height: 100%;
+  overflow: hidden; }
 
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height: 250px;
   perspective: 1000px;
   overflow: hidden;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   transition: ease 0.3s; }
+  @media (min-width: 320px) {
+    .flip-card {
+      height: 300px; } }
+  @media (min-width: 450px) {
+    .flip-card {
+      height: 300px; } }
+  @media (min-width: 740px) {
+    .flip-card {
+      height: 280px; } }
+  @media (min-width: 1020px) {
+    .flip-card {
+      height: 250px; } }
 
 .flip-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -535,7 +599,11 @@ a {
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
 
 .flip-card-front {
   background-color: #80cbc4;
@@ -547,7 +615,7 @@ a {
   transform: rotateY(180deg); }
 
 .word-container {
-  padding: 2px 16px; }
+  height: 50px; }
 
 .flip-card-overlay {
   position: absolute;
@@ -557,9 +625,12 @@ a {
   right: 0;
   z-index: 100; }
 
+.card-img {
+  overflow: hidden; }
+
 .imgGame {
   overflow: hidden;
-  transform: translateX(-15%);
+  transform: translateX(-10%);
   height: 100%;
   width: auto; }
 

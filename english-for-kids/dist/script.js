@@ -209,7 +209,7 @@ var Category = /*#__PURE__*/function () {
   }, {
     key: "renderCard",
     value: function renderCard() {
-      return "\n        <div id=\"".concat(this.categoryNum, "\" class=\"card data-category\">\n        <img src=\"").concat(this.imgUrl, "\" alt=\"Imagine image category\" class='card-img data-category'\">\n        <div class=\"container data-category\">\n          <h4 class='data-category'><b>").concat(this.categoryName, "</b></h4>\n        </div>\n      </div>\n        ");
+      return "\n        <div id=\"".concat(this.categoryNum, "\" class=\"card data-category\">\n        <img src=\"").concat(this.imgUrl, "\" alt=\"Imagine image category\" class=\"category-img data-category\">\n        <div class=\"container data-category\">\n          <h4 class='data-category'><b>").concat(this.categoryName, "</b></h4>\n        </div>\n      </div>\n        ");
     }
   }]);
 
@@ -266,7 +266,7 @@ var PrintUi = /*#__PURE__*/function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var cards = [['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Toys', 'Food'], [{
+var cards = [['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Nature', 'Food'], [{
   word: 'cry',
   translation: 'плакать',
   image: 'img/cry.jpg',
@@ -507,85 +507,85 @@ var cards = [['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set
   image: 'img/laugh.jpg',
   audioSrc: 'audio/laugh.mp3'
 }], [{
-  word: 'sad',
-  translation: 'грустный',
-  image: 'img/sad.jpg',
-  audioSrc: 'audio/sad.mp3'
+  word: 'mountain',
+  translation: 'горы',
+  image: 'img/mountain.jpeg',
+  audioSrc: 'audio/mountain.mp3'
 }, {
-  word: 'angry',
-  translation: 'сердитый',
-  image: 'img/angry.jpg',
-  audioSrc: 'audio/angry.mp3'
+  word: 'sea',
+  translation: 'море',
+  image: 'img/sea.jpeg',
+  audioSrc: 'audio/sea.mp3'
 }, {
-  word: 'happy',
+  word: 'field',
   translation: 'счастливый',
-  image: 'img/happy.jpg',
-  audioSrc: 'audio/happy.mp3'
+  image: 'img/field.jpeg',
+  audioSrc: 'audio/field.mp3'
 }, {
-  word: 'tired',
-  translation: 'уставший',
-  image: 'img/tired.jpg',
-  audioSrc: 'audio/tired.mp3'
+  word: 'forest',
+  translation: 'лес',
+  image: 'img/forest.jpeg',
+  audioSrc: 'audio/forest.mp3'
 }, {
-  word: 'surprised',
-  translation: 'удивлённый',
-  image: 'img/surprised.jpg',
-  audioSrc: 'audio/surprised.mp3'
+  word: 'ocean',
+  translation: 'океан',
+  image: 'img/ocean.jpeg',
+  audioSrc: 'audio/ocean.mp3'
 }, {
-  word: 'scared',
-  translation: 'испуганный',
-  image: 'img/scared.jpg',
-  audioSrc: 'audio/scared.mp3'
+  word: 'river',
+  translation: 'река',
+  image: 'img/river.jpeg',
+  audioSrc: 'audio/river.mp3'
 }, {
-  word: 'smile',
-  translation: 'улыбка',
-  image: 'img/smile.jpg',
-  audioSrc: 'audio/smile.mp3'
+  word: 'desert',
+  translation: 'пустыня',
+  image: 'img/desert.jpeg',
+  audioSrc: 'audio/desert.mp3'
 }, {
-  word: 'laugh',
-  translation: 'смех',
-  image: 'img/laugh.jpg',
-  audioSrc: 'audio/laugh.mp3'
+  word: 'lake',
+  translation: 'озеро',
+  image: 'img/lake.jpeg',
+  audioSrc: 'audio/lake.mp3'
 }], [{
-  word: 'sad',
-  translation: 'грустный',
-  image: 'img/sad.jpg',
-  audioSrc: 'audio/sad.mp3'
+  word: 'coffee',
+  translation: 'кофе',
+  image: 'img/coffee.jpeg',
+  audioSrc: 'audio/coffee.mp3'
 }, {
-  word: 'angry',
-  translation: 'сердитый',
-  image: 'img/angry.jpg',
-  audioSrc: 'audio/angry.mp3'
+  word: 'egg',
+  translation: 'яйцо',
+  image: 'img/egg.jpeg',
+  audioSrc: 'audio/egg.mp3'
 }, {
-  word: 'happy',
-  translation: 'счастливый',
-  image: 'img/happy.jpg',
-  audioSrc: 'audio/happy.mp3'
+  word: 'biscuit',
+  translation: 'печенье',
+  image: 'img/biscuit.jpeg',
+  audioSrc: 'audio/biscuit.mp3'
 }, {
-  word: 'tired',
-  translation: 'уставший',
-  image: 'img/tired.jpg',
-  audioSrc: 'audio/tired.mp3'
+  word: 'pasta',
+  translation: 'спагетти',
+  image: 'img/pasta.jpeg',
+  audioSrc: 'audio/pasta.mp3'
 }, {
-  word: 'surprised',
-  translation: 'удивлённый',
-  image: 'img/surprised.jpg',
-  audioSrc: 'audio/surprised.mp3'
+  word: 'lemon',
+  translation: 'лемон',
+  image: 'img/lemon.jpeg',
+  audioSrc: 'audio/lemon.mp3'
 }, {
-  word: 'scared',
-  translation: 'испуганный',
-  image: 'img/scared.jpg',
-  audioSrc: 'audio/scared.mp3'
+  word: 'tomato',
+  translation: 'томат',
+  image: 'img/tomato.jpeg',
+  audioSrc: 'audio/tomato.mp3'
 }, {
-  word: 'smile',
-  translation: 'улыбка',
-  image: 'img/smile.jpg',
-  audioSrc: 'audio/smile.mp3'
+  word: 'potato',
+  translation: 'картофель',
+  image: 'img/potato.jpeg',
+  audioSrc: 'audio/potato.mp3'
 }, {
-  word: 'laugh',
-  translation: 'смех',
-  image: 'img/laugh.jpg',
-  audioSrc: 'audio/laugh.mp3'
+  word: 'bread',
+  translation: 'хлеб',
+  image: 'img/bread.jpg',
+  audioSrc: 'audio/bread.mp3'
 }]];
 /* harmony default export */ __webpack_exports__["default"] = (cards);
 
@@ -637,12 +637,14 @@ var handleClick = function handleClick(event) {
 
   if (event.target.classList.contains('category')) {
     Object(_render__WEBPACK_IMPORTED_MODULE_0__["renderCategoryMenu"])();
-    _state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory = event.target.id;
+    _state__WEBPACK_IMPORTED_MODULE_1__["default"].activeCategory = 'main';
 
     var _active2 = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["elementBySelector"])(document, '.active');
 
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["removeActive"])(_active2, 'active');
     Object(_utils__WEBPACK_IMPORTED_MODULE_2__["setActive"])(event.target, 'active');
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["hideButton"])('.game_btn');
+    Object(_utils__WEBPACK_IMPORTED_MODULE_2__["hideButton"])('.switch');
   }
 
   if (event.target.classList.contains('menu-item')) {
@@ -663,16 +665,10 @@ var handleClick = function handleClick(event) {
   if (event.target.classList.contains('flip-card-overlay')) {
     var clickedCard = event.target.parentElement;
 
-    if (!_state__WEBPACK_IMPORTED_MODULE_1__["default"].game) {
+    if (_state__WEBPACK_IMPORTED_MODULE_1__["default"].game) {
+      Object(_utils__WEBPACK_IMPORTED_MODULE_2__["game"])(event);
+    } else {
       Object(_utils__WEBPACK_IMPORTED_MODULE_2__["playAudio"])(clickedCard);
-    }
-
-    if (_state__WEBPACK_IMPORTED_MODULE_1__["default"].gameStarted) {
-      if (_state__WEBPACK_IMPORTED_MODULE_1__["default"].currentWord === event.path[3]) {
-        event.path[3].classList.add('checked');
-        event.path[3].classList.remove('active_card');
-        Object(_utils__WEBPACK_IMPORTED_MODULE_2__["nextCard"])();
-      }
     }
   }
 
@@ -735,10 +731,14 @@ var eventHandler = function eventHandler() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  header: "\n    <div class=\"header_section\">\n      <div class='wrapper'>\n        <div class='header'>\n          <button class=\"btn menu_btn open_menu\"><i class=\"fa fa-bars open_menu\"></i></button>\n          <button class=\"btn game_btn hidden_opacity\">Start game</i></button>\n          <button class=\"btn repeat_btn hidden_opacity\"><i class=\"fa fa-refresh rotate-card\"></i></i></button>\n          <label class=\"switch\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\">\n          <span class=\"on\">Game</span>\n          </span>\n          </label>\n        </div>\n      </div>\n    </div>\n  ",
+  header: "\n    <div class=\"header_section\">\n      <div class='wrapper'>\n        <div class='header'>\n        <audio class=\"correct\">\n            <source src=\"./assets/audio/correct.mp3\" type=\"audio/mpeg\" class=\"audio\">\n        </audio>\n        <audio class=\"error\">\n            <source src=\"./assets/audio/error.mp3\" type=\"audio/mpeg\" class=\"audio\">\n        </audio>\n        <audio class=\"success\">\n            <source src=\"./assets/audio/success.mp3\" type=\"audio/mpeg\" class=\"audio\">\n        </audio>\n        <audio class=\"failure\">\n            <source src=\"./assets/audio/failure.mp3\" type=\"audio/mpeg\" class=\"audio\">\n        </audio>\n          <button class=\"btn menu_btn open_menu\"><i class=\"fa fa-bars open_menu\"></i></button>\n          <button class=\"btn game_btn hidden_opacity\">Start game</i></button>\n          <button class=\"btn repeat_btn hidden_opacity\"><i class=\"fa fa-refresh rotate-card\"></i></button>\n          <label class=\"switch hidden_opacity\">\n          <input class=\"switcher\" type=\"checkbox\">\n          <span class=\"slider round\">\n          <span class=\"on\">Game</span>\n          </span>\n          </label>\n        </div>\n      </div>\n    </div>\n  ",
   side_panel: "<div id=\"mainMenu\" class=\"sidepanel\">\n  <button class=\"btn btn_close close_menu\"><i class=\"fa fa-close close_menu\"></i></button>\n  <div class=\"sidemenu-item category active itemmain\">Main menu</div>\n  </div>",
-  main: "\n    <div class=\"main_section\">\n      <div class=\"wrapper\">\n      <div class=\"main main-window\">\n      </div>\n      </div> \n    </div> \n  ",
-  footer: "\n    <section class=\"footer_section\">\n      <div class='wrapper'>\n        <div class=\"footer\">\n          <a href=\"mailto:thespirit3000@gmail.com\">created by Dzianis Bogdan</>\n        </div>\n      </div>  \n    </section>\n  "
+  main: "\n    <div class=\"main_section\">\n      <div class=\"wrapper\">\n      <div class=\"score\"></div>\n      <div class=\"main main-window\">\n      </div>\n      </div> \n    </div> \n  ",
+  footer: "\n    <section class=\"footer_section\">\n      <div class='wrapper'>\n        <div class=\"footer\">\n          <a href=\"mailto:thespirit3000@gmail.com\">created by Dzianis Bogdan</>\n        </div>\n      </div>  \n    </section>\n  ",
+  fullStar: "\n  <i class=\"fa fa-star fa-2x correct star\" aria-hidden=\"true\"></i>\n  ",
+  emptyStar: "\n  <i class=\"fa fa-star-o fa-2x error star\" aria-hidden=\"true\"></i>\n  ",
+  failure: "\n    <div class='end-screen'> \n      <img src=\"./assets/img/failure.jpg\" alt=\"Imagine image category\" class='end-img failure-img'>\n    </div>\n  ",
+  success: "\n  <div class='end-screen'> \n      <img src=\"./assets/img/success.jpg\" alt=\"Imagine image category\" class='end-img success-img'>\n    </div>\n  "
 });
 
 /***/ }),
@@ -747,11 +747,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************!*\
   !*** ./src/js/render.js ***!
   \**************************/
-/*! exports provided: renderCategoryMenu, renderSideMenu, renderLearnCards, renderLearnCardsFromState */
+/*! exports provided: renderFailure, renderSuccess, renderCategoryMenu, renderSideMenu, renderLearnCards, renderLearnCardsFromState */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderFailure", function() { return renderFailure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSuccess", function() { return renderSuccess; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderCategoryMenu", function() { return renderCategoryMenu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSideMenu", function() { return renderSideMenu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderLearnCards", function() { return renderLearnCards; });
@@ -760,6 +762,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_array__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data-array */ "./src/js/data-array.js");
 /* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Card */ "./src/js/Card.js");
 /* harmony import */ var _state__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./state */ "./src/js/state.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
+/* harmony import */ var _PrintUi__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PrintUi */ "./src/js/PrintUi.js");
+/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interface */ "./src/js/interface.js");
+
+
+
+ // eslint-disable-next-line import/no-cycle
 
 
 
@@ -770,8 +779,22 @@ var cleanMain = function cleanMain() {
   main.innerHTML = '';
 };
 
-var renderCategoryMenu = function renderCategoryMenu() {
+var renderFailure = function renderFailure() {
   cleanMain();
+  var main = document.querySelector('.main');
+  var failure = new _PrintUi__WEBPACK_IMPORTED_MODULE_5__["default"](_interface__WEBPACK_IMPORTED_MODULE_6__["default"].failure);
+  failure.printHTML(main);
+};
+var renderSuccess = function renderSuccess() {
+  cleanMain();
+  var main = document.querySelector('.main');
+  var success = new _PrintUi__WEBPACK_IMPORTED_MODULE_5__["default"](_interface__WEBPACK_IMPORTED_MODULE_6__["default"].success);
+  success.printHTML(main);
+};
+var renderCategoryMenu = function renderCategoryMenu() {
+  _state__WEBPACK_IMPORTED_MODULE_3__["default"].activeCategory = 'main';
+  cleanMain();
+  Object(_utils__WEBPACK_IMPORTED_MODULE_4__["hideButtons"])();
   _data_array__WEBPACK_IMPORTED_MODULE_1__["default"][0].forEach(function (element) {
     var mainCategory = document.querySelector('.main-window');
     var indexOfElement = _data_array__WEBPACK_IMPORTED_MODULE_1__["default"][0].indexOf(element) + 1;
@@ -789,6 +812,7 @@ var renderSideMenu = function renderSideMenu() {
 };
 var renderLearnCards = function renderLearnCards(target) {
   cleanMain();
+  Object(_utils__WEBPACK_IMPORTED_MODULE_4__["showButtons"])();
   var main = document.querySelector('.main-window');
   var categoryIndex = _data_array__WEBPACK_IMPORTED_MODULE_1__["default"][0].indexOf(target) + 1;
   _data_array__WEBPACK_IMPORTED_MODULE_1__["default"][categoryIndex].forEach(function (element) {
@@ -819,6 +843,21 @@ var state = {
   gameArray: [],
   currentWord: '',
   currentIndex: '0',
+  countCorrect: 0,
+  countIncorrect: 0,
+  resetGame: function resetGame() {
+    this.gameArray = [];
+    this.currentWord = '';
+    this.currentIndex = '0';
+    this.countCorrect = 0;
+    this.countIncorrect = 0;
+  },
+  addIncorrect: function addIncorrect() {
+    this.countIncorrect += 1;
+  },
+  resetStarted: function resetStarted() {
+    this.gameStarted = false;
+  },
   toggleStarted: function toggleStarted() {
     this.gameStarted = !this.gameStarted;
   },
@@ -834,7 +873,7 @@ var state = {
 /*!*************************!*\
   !*** ./src/js/utils.js ***!
   \*************************/
-/*! exports provided: elementBySelector, setActive, removeActive, playAudio, closeMenu, showButton, hideButton, startGame, nextCard, stopGame, removeWhiteSpaces */
+/*! exports provided: elementBySelector, setActive, removeActive, playAudio, closeMenu, showButton, hideButton, hideButtons, showButtons, startGame, nextCard, stopGame, game, removeWhiteSpaces */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -846,11 +885,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeMenu", function() { return closeMenu; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showButton", function() { return showButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideButton", function() { return hideButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hideButtons", function() { return hideButtons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showButtons", function() { return showButtons; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startGame", function() { return startGame; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nextCard", function() { return nextCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stopGame", function() { return stopGame; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "game", function() { return game; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeWhiteSpaces", function() { return removeWhiteSpaces; });
 /* harmony import */ var _state__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./state */ "./src/js/state.js");
+/* harmony import */ var _interface__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interface */ "./src/js/interface.js");
+/* harmony import */ var _PrintUi__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PrintUi */ "./src/js/PrintUi.js");
+/* harmony import */ var _render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./render */ "./src/js/render.js");
+
+
+ // eslint-disable-next-line import/no-cycle
+
 
 var elementBySelector = function elementBySelector(element, selector) {
   return element.querySelector(selector);
@@ -865,6 +914,12 @@ var playAudio = function playAudio(element) {
   var toPlay = element.querySelector('audio');
   toPlay.play();
 };
+
+var playSelector = function playSelector(selector) {
+  var toPlay = document.querySelector(selector);
+  toPlay.play();
+};
+
 var closeMenu = function closeMenu() {
   var menuElement = document.querySelector('.sidepanel');
   menuElement.setAttribute('style', 'width: 0px');
@@ -882,6 +937,58 @@ var activeArray = function activeArray() {
   return document.querySelectorAll('.active_card');
 };
 
+var domArray = function domArray(selector) {
+  return document.querySelectorAll(selector);
+};
+
+var addFullStar = function addFullStar() {
+  var fullStar = new _PrintUi__WEBPACK_IMPORTED_MODULE_2__["default"](_interface__WEBPACK_IMPORTED_MODULE_1__["default"].fullStar);
+  var scoreArea = document.querySelector('.score');
+  fullStar.printHTML(scoreArea);
+};
+
+var addEmptyStar = function addEmptyStar() {
+  var fullStar = new _PrintUi__WEBPACK_IMPORTED_MODULE_2__["default"](_interface__WEBPACK_IMPORTED_MODULE_1__["default"].emptyStar);
+  var scoreArea = document.querySelector('.score');
+  fullStar.printHTML(scoreArea);
+};
+
+var emptyScore = function emptyScore() {
+  var scoreArea = document.querySelector('.score');
+  scoreArea.innerHTML = '';
+};
+
+var hideButtons = function hideButtons() {
+  hideButton('.game_btn');
+  hideButton('.repeat_btn');
+  hideButton('.switch');
+};
+var showButtons = function showButtons() {
+  showButton('.switch');
+};
+
+var failScore = function failScore() {
+  Object(_render__WEBPACK_IMPORTED_MODULE_3__["renderFailure"])();
+  playSelector('.failure');
+  setTimeout(function () {
+    emptyScore();
+    Object(_render__WEBPACK_IMPORTED_MODULE_3__["renderCategoryMenu"])();
+  }, 4000);
+};
+
+var successScore = function successScore() {
+  Object(_render__WEBPACK_IMPORTED_MODULE_3__["renderSuccess"])();
+  playSelector('.success');
+  setTimeout(function () {
+    emptyScore();
+    Object(_render__WEBPACK_IMPORTED_MODULE_3__["renderCategoryMenu"])();
+  }, 4000);
+};
+
+var scoreHandler = function scoreHandler(incorrectScore) {
+  return incorrectScore > 0 ? failScore() : successScore();
+};
+
 var startGame = function startGame() {
   _state__WEBPACK_IMPORTED_MODULE_0__["default"].toggleStarted();
   showButton('.repeat_btn');
@@ -890,26 +997,54 @@ var startGame = function startGame() {
   var index = Math.floor(Math.random() * length);
   _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentIndex = index;
   _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord = _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray[index];
-  console.log(_state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray);
   playAudio(_state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord);
 };
 var nextCard = function nextCard() {
   _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray = activeArray();
   var length = _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray.length;
-  var index = Math.floor(Math.random() * length);
-  _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentIndex = index;
-  _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord = _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray[index];
-  console.log(_state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray);
-  playAudio(_state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord);
+
+  if (length === 0) {
+    scoreHandler(_state__WEBPACK_IMPORTED_MODULE_0__["default"].countIncorrect);
+  } else {
+    var index = Math.floor(Math.random() * length);
+    _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentIndex = index;
+    _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord = _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray[index];
+    setTimeout(function () {
+      playAudio(_state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord);
+    }, 1000);
+  }
 };
 var stopGame = function stopGame() {
-  _state__WEBPACK_IMPORTED_MODULE_0__["default"].toggleStarted();
+  _state__WEBPACK_IMPORTED_MODULE_0__["default"].resetStarted();
   hideButton('.repeat_btn');
-  _state__WEBPACK_IMPORTED_MODULE_0__["default"].gameArray = [];
-  _state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord = '';
+  emptyScore();
+  _state__WEBPACK_IMPORTED_MODULE_0__["default"].resetGame();
 
-  if (_state__WEBPACK_IMPORTED_MODULE_0__["default"].game) {
+  if (_state__WEBPACK_IMPORTED_MODULE_0__["default"].game && _state__WEBPACK_IMPORTED_MODULE_0__["default"].activeCategory !== 'main') {
     showButton('.game_btn');
+  } else {
+    hideButton('.game_btn');
+  }
+};
+var game = function game(event) {
+  if (_state__WEBPACK_IMPORTED_MODULE_0__["default"].gameStarted && event.path[3].classList.contains('active_card')) {
+    if (_state__WEBPACK_IMPORTED_MODULE_0__["default"].currentWord === event.path[3]) {
+      event.path[3].classList.add('checked');
+      event.path[3].classList.remove('active_card');
+      playSelector('.correct');
+      addFullStar();
+      nextCard();
+    } else {
+      _state__WEBPACK_IMPORTED_MODULE_0__["default"].addIncorrect();
+      addEmptyStar();
+      playSelector('.error');
+    }
+
+    var starArray = domArray('.star');
+
+    if (starArray.length > 8) {
+      emptyScore();
+    }
   }
 };
 var removeWhiteSpaces = function removeWhiteSpaces(string) {
